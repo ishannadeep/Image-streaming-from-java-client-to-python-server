@@ -9,7 +9,7 @@ import java.util.Arrays;
  *
  * @author ishan
  */
-public class Aes {
+public class Aes_hybrid {
     
     int key_columns_temp[][]=new int[60][4];
     int pc1[]={6, 4, 15, 7, 13, 9, 11, 2, 5, 14, 8, 10, 0, 12, 1, 3};
