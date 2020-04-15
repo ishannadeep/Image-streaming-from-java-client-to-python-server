@@ -37,7 +37,7 @@ public class Reading_eye {
   
      Socket socket = new Socket(REMOTE_HOST, REMOTE_PORT);
   
-     Aes AES=new Aes();
+     Aes_hybrid AES=new Aes_hybrid();
      //256-bit key and plain text
      String key = "ahdfsujeytsbsdfawskdfhsdgfereijd";
      //converting key and plain text to byte arrays
