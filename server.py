@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 import socket
 import threading
-import aes_2
+import aes_hybrid
  
 # Listen for TCP connections on port 65432 on any interface.
 HOST = ''
