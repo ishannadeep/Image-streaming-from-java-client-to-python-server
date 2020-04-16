@@ -55,7 +55,7 @@ class Session(threading.Thread):
         self.conn.sendall(gen_key_bytes.encode('utf-8'))
       else:
         #decrypting image and decodeing and converting decoded bytes to image format
-        image = Image.open(BytesIO(base64.b64decode(aes_2.decrypt(str(sec_key)+'gdbtiomagRDbsHLkdfhsdgfereijd',line))))
+        image = Image.open(BytesIO(base64.b64decode(Aes_hybrid.decrypt(str(sec_key)+'gdbtiomagRDbsHLkdfhsdgfereijd',line))))
         #adding image segments to full image frame
         dst.paste(image,(width,height))
         if width<800:
