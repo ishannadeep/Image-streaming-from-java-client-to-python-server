@@ -25,10 +25,10 @@ import static reading_eye.segment_Img.imageToBufferedImage;
  * @author ishan
  */
 public class Reading_eye {
+ 
  public static final String REMOTE_HOST = "192.168.10.13";
  public static final int REMOTE_PORT = 65495;
  
- long private_key = 48;
     /**
      * @param args the command line arguments
      */
