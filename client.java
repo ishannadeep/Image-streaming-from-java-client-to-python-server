@@ -47,16 +47,16 @@ public class Reading_eye {
             return (a^ b) % P; 
     } 
     public static void main(String[] args) throws IOException {
-    //P and G are random numbers for diffie hellman key exchange
-    long P=230;
-    long G=99;
-    Socket socket = new Socket(REMOTE_HOST, REMOTE_PORT);
+      //P and G are random numbers for diffie hellman key exchange
+      long P=230;
+      long G=99;
+      Socket socket = new Socket(REMOTE_HOST, REMOTE_PORT);
     
-    BufferedWriter sockOut = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-    BufferedReader sockIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-     // Write the text to the remote process.
-    //creating client generated key
-    String gen_key =""+power(G, 48, P);
+      BufferedWriter sockOut = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+      BufferedReader sockIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+      // Write the text to the remote process.
+      //creating client generated key
+      String gen_key =""+power(G, 48, P);
       //sending client generated key to the server
       sockOut.write(gen_key, 0, gen_key.length());
       sockOut.newLine();
