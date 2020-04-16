@@ -54,7 +54,7 @@ class Session(threading.Thread):
         #sending server generated key to client
         self.conn.sendall(gen_key_bytes.encode('utf-8'))
       else:
-        #decrypting image and decodeing and converting decoded bytes to image format
+        #Adding secret key to the key and decrypting image and decodeing and converting decoded bytes to image format
         image = Image.open(BytesIO(base64.b64decode(Aes_hybrid.decrypt(str(sec_key)+'gdbtiomagRDbsHLkdfhsdgfereijd',line))))
         #adding image segments to full image frame
         dst.paste(image,(width,height))
