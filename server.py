@@ -30,10 +30,10 @@ class Session(threading.Thread):
     self.conn = conn
  
   def run(self):
-    print("sdsdsd")
     roun=0
     width=0
     height=0
+    #P and G are random numbers for diffie hellman key exchange
     P=230
     G=99
     #creating generated key of the server
